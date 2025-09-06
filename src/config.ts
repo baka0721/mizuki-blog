@@ -192,7 +192,7 @@ export const navBarConfig: NavBarConfig = {
 				LinkPreset.Diary,
 				{
 					name: "相册",
-					url: "/mizuki-blog/albums/",
+					url: "/albums/",
 					icon: "material-symbols:photo-library",
 				},
 			],
