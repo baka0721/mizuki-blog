@@ -74,7 +74,7 @@ async function processAlbumFolder(
 			return null;
 		}
 
-		cover = `/images/albums/${folderName}/cover.jpg`;
+		cover = `/mizuki-blog/images/albums/${folderName}/cover.jpg`;
 		photos = scanPhotos(folderPath, folderName);
 	}
 
@@ -132,7 +132,7 @@ function scanPhotos(folderPath: string, albumId: string): Photo[] {
 
 		photos.push({
 			id: `${albumId}-photo-${index}`,
-			src: `/images/albums/${albumId}/${file}`,
+			src: `/mizuki-blog/images/albums/${albumId}/${file}`,
 			alt: baseName,
 			title: baseName,
 			tags: tags,
