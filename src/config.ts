@@ -192,7 +192,7 @@ export const navBarConfig: NavBarConfig = {
 				LinkPreset.Diary,
 				{
 					name: "相册",
-					url: "/albums/",
+					url: "/mizuki-blog/albums/",
 					icon: "material-symbols:photo-library",
 				},
 			],
@@ -283,7 +283,7 @@ export const announcementConfig: AnnouncementConfig = {
 	link: {
 		enable: true, // 启用链接
 		text: "了解更多", // 链接文本
-		url: "/about/", // 链接 URL
+		url: "/mizuki-blog/about/", // 链接 URL
 		external: false, // 内部链接
 	},
 };
