@@ -1,9 +1,10 @@
 ---
-title: 基于AOP实现参数校验、登录校验、权限校验
+title: AOP实战
+description: 基于AOP实现参数校验、登录校验、权限校验的框架
 published: 2025-09-07
 tags: [Java]
 category: Java
-draft: true
+draft: false
 ---
 
 ## 📌 学习背景
