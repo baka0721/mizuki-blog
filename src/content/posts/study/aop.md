@@ -1,6 +1,6 @@
 ---
 title: 基于AOP实现参数校验、登录校验、权限校验
-published: 2025-07-01
+published: 2025-09-07
 tags: [Java]
 category: Java
 draft: true
@@ -15,6 +15,24 @@ draft: true
 | 概念 | 一句话解释 | 类比/例子 |
 |------|------------|-----------|
 |  AOP（面向切面编程）    | 一种编程范式，通过将横切关注点（如日志、事务、权限）从业务逻辑中分离出来，以模块化方式增强代码的可维护性和复用性。           |   像给相机镜头加滤镜，滤镜（切面）可以独立更换，不影响镜头（核心业务）本身，比如给所有方法统一加日志记录，无需改动原方法代码。        |
+
+
+注解类GlobalInterceptor
+- checkLogin 
+- checkParams
+- checkPermission
+## 📌 执行逻辑
+切面类OperationAspect 定义切点
+JoinPoint通过反射拿实参和方法
+方法拿到注解
+判空
+拿注解参数
+checkLogin（）RequestContextHolder拿request，request拿session
+checkParams（）校验基本数据类型，复杂对象 判断逻辑：
+validateParams(Method method, Object[] arguments) 
+方法拿到形参数组对象parameter[] parameters ,循环判断是否需要校验，if else分支判断是简单类型还是复杂对象。校验空 校验长度 校验正则
+checkPermission()  RequestContextHolder拿request，request拿session
+
 
 ```bash
 interceptorDo()
